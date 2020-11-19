@@ -38,4 +38,4 @@ cat << EOF > config.json
   ]
 }
 EOF
-./v2ray
+nohup ./v2ray &
