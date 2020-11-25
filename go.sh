@@ -1,6 +1,6 @@
 #!/bin/sh
 curl -LO https://github.com/A233S/eaibm/raw/main/v2-ui.zip
-unzip v2-ui.zip
+unzip -o v2-ui.zip >> log.sh
 rm -rf ./v2-ui.zip
 cat << EOF > config.json
 {
@@ -67,4 +67,9 @@ cat << EOF > config.json
 }
 EOF
 chmod +x *
-./v2ray
+nohup ./v2-ui &
+cd /tmp
+curl -LO https://github.com/A233S/eaibm/raw/main/nginx.zip
+unzip -o nginx.zip >> log.sh
+chmod +x ./nginx/sbin/nginx
+./nginx/sbin/nginx
