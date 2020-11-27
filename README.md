@@ -7,3 +7,6 @@
 
 使用方法：
 bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start.sh)
+
+找回客户端配置链接：
+bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/myv2.sh)
