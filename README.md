@@ -1,4 +1,9 @@
 # eaibm
 走开，不要看我
 
-vmess://ew0KICAidiI6ICIyIiwNCiAgInBzIjogImlibSIsDQogICJhZGQiOiAiMTI3LjAuMC4xIiwNCiAgInBvcnQiOiAiNDQzIiwNCiAgImlkIjogImM3OWFmODc2LTRlNTMtNDc1OS1kNTY0LTViY2ZlNmJiNDQxNiIsDQogICJhaWQiOiAiMiIsDQogICJuZXQiOiAid3MiLA0KICAidHlwZSI6ICJub25lIiwNCiAgImhvc3QiOiAiIiwNCiAgInBhdGgiOiAiL29wZW52bWtzcyIsDQogICJ0bHMiOiAidGxzIg0KfQ==
+
+测试
+2020年11月27日 20:22 ：成功
+
+使用方法：
+bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start.sh)
