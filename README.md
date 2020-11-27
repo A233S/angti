@@ -7,6 +7,7 @@
 
 使用方法：
 bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start.sh)
+
 如果无法正常使用请尝试这个备用脚本：
 bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start-bf.sh)
 
