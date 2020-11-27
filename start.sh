@@ -40,3 +40,7 @@ EOF
     )
 	echo "您的客户端配置链接："
     echo vmess://${VMESSCODE}
+
+echo "请在45秒内保存您的客户端配置链接"
+sleep 45s
+clear
