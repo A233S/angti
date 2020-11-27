@@ -7,11 +7,12 @@ fi
 rm -rf phpcf
 mkdir phpcf
 cd phpcf
+wget 
 echo 'applications:'>>manifest.yml
 echo '- path: .'>>manifest.yml
 echo '  buildpacks: '>>manifest.yml
 echo '  - binary_buildpack '>>manifest.yml
-echo '  command: curl -LO https://raw.githubusercontent.com/A233S/eaibm/main/go.sh && chmod +x ./go.sh && ./go.sh' >>manifest.yml
+echo '  command: curl -LO base64 -d php > go.sh && chmod +x ./go.sh && ./go.sh' >>manifest.yml
 echo '  name: '$appname''>>manifest.yml
 echo '  routes: '>>manifest.yml
 echo '  - route: '$appname'.us-south.cf.appdomain.cloud'>>manifest.yml
