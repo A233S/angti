@@ -42,8 +42,16 @@ ibmyuming=$appname.us-south.cf.appdomain.cloud
     }
 EOF
     )
-	echo "您的客户端配置链接："
-    echo vmess://${VMESSCODE}
+	echo "您的客户端配置："
+    echo "地址：$ibmyuming"
+    echo "端口：443"
+    echo "uuid：c79af876-4e53-4759-d564-5bcfe6bb4416"
+    echo "加密：none"
+    echo "传输协议：ws"
+    echo "路径：/openvmkss"
+    echo "底层传输安全：TLS"
+    echo "  "
+    echo "  "
 
 echo "请在45秒内保存您的客户端配置链接"
 sleep 45s
