@@ -44,11 +44,3 @@ EOF
 echo "请在45秒内保存您的客户端配置链接"
 sleep 45s
 clear
-
-echo
-echo "Welcome to IBM Cloud Shell!"
-echo "Image version: 1.0.10"
-echo "Help us improve future releases by clicking Feedback to share your experience!"
-echo "Note: Your Cloud Shell session is running in Dallas (us-south). Your workspace includes 500 MB of temporary storage. This session will close after an hour of inactivity. If you don't have any active sessions for an hour or you reach the 50-hour weekly usage limit, your workspace data is removed. To track your usage, go to Usage quota in the Cloud Shell menu."
-echo "Tip: Enter 'ibmcloud' to use the IBM Cloud CLI. The Dallas (us-south) region is targeted by default. You can switch the region by running 'ibmcloud target -r <region-name>'."
-echo
