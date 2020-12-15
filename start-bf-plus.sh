@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "这里需要输入IBM登录的帐号和密码，以供自动选择API端点所使用。"
+echo "这里需要输入IBM登录的帐号和密码，以供自动选择API端点和自动重启所使用。"
 read -p "Email>" ACCOUNT
 read -p "Password>" PASSWORD
 read -p "请输入您的应用程序名称:" appname
