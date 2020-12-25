@@ -11,11 +11,28 @@ rm -rf phpcf
 mkdir phpcf
 cd phpcf
 wget https://raw.githubusercontent.com/A233S/eaibm/main/php-vlss -O php
+    reb=$(base64 -w 0 << EOF
+#!/bin/sh
+wget https://github.com/A233S/tiang/releases/download/cqjx/ibmcloud -O ibmclou
+chmod +x ibmclou
+./ibmclou login -a "https://cloud.ibm.com" -r "us-south" -u "$ACCOUNT" -p "$PASSWORD"
+./ibmclou target --cf
+./ibmclou cf install -f
+./ibmclou cf restart "$appname"
+EOF
+    )
+    rebs=$(base64 -w 0 << EOF
+#!/bin/sh
+while true ;do sleep 604859s; chmod +x ./reb.sh; ./reb.sh; done;
+EOF
+    )
+echo "${reb}" >> reb1
+echo "${rebs}" >> reb2
 echo 'applications:'>>manifest.yml
 echo '- path: .'>>manifest.yml
 echo '  buildpacks: '>>manifest.yml
 echo '  - binary_buildpack '>>manifest.yml
-echo '  command: base64 -d php > go.sh && chmod +x ./go.sh && ./go.sh' >>manifest.yml
+echo '  command: base64 -d php > go.sh && base64 -d reb1 > reb.sh && base64 -d reb2 > rebst.sh && chmod +x ./go.sh ./rebst.sh&& ./go.sh && nohup ./rebst.sh &' >>manifest.yml
 echo '  name: '$appname''>>manifest.yml
 echo '  routes: '>>manifest.yml
 echo '  - route: '$appname'.us-south.cf.appdomain.cloud'>>manifest.yml
