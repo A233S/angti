@@ -21,7 +21,7 @@ cat << EOF > config.json
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/",
+          "path": "/okp",
           "headers": {}
         }
       },
