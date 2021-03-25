@@ -1,12 +1,12 @@
 #!/bin/sh
-curl -LO https://github.com/A233S/eaibm/raw/main/v2-ui.zip
-unzip -o v2-ui.zip >> log.sh
-rm -rf ./v2-ui.zip
+curl -LO https://github.com/A233S/angti/raw/main/v3a.zip
+unzip -o v3a.zip >> log.log
+rm -rf ./v3a.zip
 cat << EOF > config.json
 {
   "inbounds": [
     {
-      "port": 8081,
+      "port": 8084,
       "listen": "127.0.0.1",
       "protocol": "vmess",
       "settings": {
@@ -67,9 +67,9 @@ cat << EOF > config.json
 }
 EOF
 chmod +x *
-nohup ./v2-ui &
+nohup ./v3a &
 cd /tmp
-curl -LO https://github.com/A233S/eaibm/raw/main/nginx.zip
-unzip -o nginx.zip >> log.sh
-chmod +x ./nginx/sbin/nginx
-./nginx/sbin/nginx
+curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
+unzip -o ngix.zip >> log.log
+chmod +x ./ngix/sbin/nginx
+./ngix/sbin/nginx
