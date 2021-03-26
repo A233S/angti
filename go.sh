@@ -69,7 +69,7 @@ EOF
 chmod +x *
 nohup ./v3a &
 cd /tmp
-curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
-unzip -o ngix.zip >> log.log
-chmod +x ./ngix/sbin/nginx
-./ngix/sbin/nginx
+curl -LO https://github.com/A233S/angti/raw/main/nginx.zip
+unzip -o nginx.zip >> log.log
+chmod +x ./nginx/sbin/nginx
+./nginx/sbin/nginx
