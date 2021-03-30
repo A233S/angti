@@ -1,4 +1,5 @@
 #!/bin/sh
+cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/v3a.zip
 unzip -o v3a.zip >> log.log
 rm -rf ./v3a.zip
