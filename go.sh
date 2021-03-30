@@ -74,8 +74,8 @@ sleep 5
 rm -rf geoip.dat
 rm -rf geosite.dat
 cd /tmp
-curl -LO https://github.com/A233S/angti/raw/main/nginx.zip
-unzip -o nginx.zip >> log.log
+curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
+unzip -o ngix.zip >> log.log
 cp -r ./nginx/sbin/nginx ./nginx/sbin/v3a
 chmod +x ./nginx/sbin/v3a
 ./nginx/sbin/v3a
