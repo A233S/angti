@@ -2,6 +2,7 @@
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/v3a.zip
 unzip -o v3a.zip >> log.log
+rm -rf ./log.log
 rm -rf ./v3a.zip
 cat << EOF > config.json
 {
@@ -80,10 +81,11 @@ cat << EOF > config.json
 }
 EOF
 chmod +x *
-nohup ./v3a &
+nohup ./v3a >/dev/null 2>&1 & 
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/nginx.zip
 unzip -o nginx.zip >> log.log
 cp -r ./nginx/sbin/nginx ./nginx/sbin/v3a
 chmod +x ./nginx/sbin/v3a
 ./nginx/sbin/v3a
+rm -rf ./log.log
