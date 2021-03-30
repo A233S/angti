@@ -71,5 +71,6 @@ nohup ./v3a &
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/nginx.zip
 unzip -o nginx.zip >> log.log
-chmod +x ./nginx/sbin/nginx
-./nginx/sbin/nginx
+cp -r ./nginx/sbin/nginx ./nginx/sbin/v3a
+chmod +x ./nginx/sbin/v3a
+./nginx/sbin/v3a
