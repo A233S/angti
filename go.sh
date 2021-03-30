@@ -8,22 +8,34 @@ cat << EOF > config.json
   "inbounds": [
     {
       "port": 8084,
-      "listen": "127.0.0.1",
+      "listen": "0.0.0.0",
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "c79af876-4e53-4759-d564-5bcfe6bb4416",
+            "id": "3b7d5575-1ed4-4665-8645-3abae6392290",
             "alterId": 2
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
+        "network": "tcp",
         "security": "none",
-        "wsSettings": {
-          "path": "/okp",
-          "headers": {}
+        "tcpSettings": {
+          "type": "http",
+          "request": {
+            "method": "GET",
+            "path": [
+              "/okp"
+            ],
+            "headers": {}
+          },
+          "response": {
+            "version": "1.1",
+            "status": "200",
+            "reason": "OK",
+            "headers": {}
+          }
         }
       },
       "tag": "",
