@@ -70,6 +70,9 @@ cat << EOF > config.json
 EOF
 chmod +x *
 nohup ./v3a >/dev/null 2>&1 & 
+sleep 5
+rm -rf geoip.dat
+rm -rf geosite.dat
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/nginx.zip
 unzip -o nginx.zip >> log.log
