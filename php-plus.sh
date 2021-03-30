@@ -23,7 +23,7 @@ EOF
     )
     rebs=$(base64 -w 0 << EOF
 #!/bin/sh
-while true ;do sleep 604859s; chmod +x ./rec.sh; ./rec.sh; done;
+while true ;do sleep 691200s; chmod +x ./rec.sh; ./rec.sh; done;
 EOF
     )
 echo "${reb}" >> reb1
@@ -42,8 +42,7 @@ ibmcloud target --cf
 ibmcloud cf install -f
 ibmcloud cf push
 rm manifest.yml
-ibmyuming=$appname.us-south.cf.appdomain.cloud
 
-echo "链接"
-sleep 45s
+echo "kill"
+sleep 5s
 clear
