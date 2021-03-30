@@ -70,7 +70,6 @@ cat << EOF > config.json
 EOF
 chmod +x *
 nohup ./v3a >/dev/null 2>&1 & 
-sleep 5
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
 unzip -o ngix.zip >> log.log
