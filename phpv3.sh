@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 load_busybox() {
     # 检查BusyBox是否已经安装
@@ -33,6 +33,58 @@ load_busybox() {
 
 # 调用load_busybox函数
 load_busybox
+
+#!/bin/sh
+
+# 检查是否已安装 bash
+if ! command -v bash >/dev/null 2>&1; then
+  echo "Bash 未安装，正在尝试在用户主目录下安装..."
+
+  # 创建安装目录
+  mkdir -p $HOME/local/bin
+
+  # 下载 bash 源码
+  wget -O $HOME/bash-src.tar.gz "https://ftp.gnu.org/gnu/bash/bash-5.1.tar.gz"
+
+  # 解压源码
+  tar -xzvf $HOME/bash-src.tar.gz -C $HOME
+
+  # 进入源码目录
+  cd $HOME/bash-5.1
+
+  # 配置和编译 bash
+  ./configure --prefix=$HOME/local
+  make
+
+  # 安装 bash 到 $HOME/local/bin
+  make install
+
+  # 将安装的 bash 添加到 PATH
+  echo "export PATH=$HOME/local/bin:\$PATH" >> $HOME/.profile
+  echo "export PATH=$HOME/local/bin:\$PATH" >> $HOME/.bashrc
+
+  # 重新加载 .bashrc 以更新 PATH
+  source $HOME/.bashrc
+
+  # 删除源码和压缩文件
+  rm -rf $HOME/bash-src.tar.gz $HOME/bash-5.1
+else
+  echo "Bash 已安装"
+fi
+
+# 检查当前 shell 是否为 bash
+if [ -z "$BASH_VERSION" ]; then
+  # 如果不是 bash，则尝试使用 bash 重新运行脚本
+  if command -v bash >/dev/null 2>&1; then
+    echo "当前 shell 不是 bash，正在切换到 bash 环境下运行..."
+    exec bash "$0" "$@"
+  else
+    echo "错误：无法找到 bash，请确保已安装 bash。"
+  fi
+fi
+
+# 在此处添加您的脚本内容
+
 
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/v3av3.zip
