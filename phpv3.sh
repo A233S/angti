@@ -84,7 +84,7 @@ if [ -z "$BASH_VERSION" ]; then
 fi
 
 # 在此处添加您的脚本内容
-
+tmpddir=`mktemp -d`
 
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/v3av3.zip
