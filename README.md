@@ -1,15 +1,20 @@
 # eaibm
 
 
-测试
+###测试
 2020年12月13日 20:58 ：成功
 
-使用方法：
-
-
+###使用方法：
 
 main:bash <(curl -Ls https://github.com/A233S/angti/raw/main/phpv3.sh)
-
+####main
+```
+bash <(curl -Ls https://github.com/A233S/angti/raw/main/phpv3.sh)
+```
+####transfersh
+```
+bash <(curl -Ls https://github.com/A233S/angti/raw/main/transfer.sh)
+```
 
 bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start.sh)
 
