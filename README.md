@@ -13,7 +13,7 @@ bash <(curl -Ls https://github.com/A233S/angti/raw/main/phpv3.sh)
 ```
 ####transfersh
 ```
-bash <(curl -Ls https://github.com/A233S/angti/raw/main/transfer.sh)
+bash <(curl -Ls https://github.com/A233S/angti/raw/main/transfersh.sh)
 ```
 
 bash <(curl -Ls https://raw.githubusercontent.com/A233S/eaibm/main/start.sh)
