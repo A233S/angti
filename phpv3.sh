@@ -210,5 +210,13 @@ nohup /tmp/ttyd -W bash > /dev/null &
 wget -O /tmp/frc http://d.of.gs/client/OpenFRP_0.48.1_678f4eae_20230505/frpc_linux_amd64.tar.gz > /dev/null
 tar -zxvf /tmp/frc
 chmod 777 /tmp/frpc_linux_amd64
-nohup /tmp/frpc_linux_amd64 -u cef2958f5d3f7ad96c9aeade8e270b58 -p 155102 > /dev/null &
+if [ -z "$1" ]; then
+  # 如果传输1是空，执行这个命令
+  echo "传输1是空"
+  nohup /tmp/frpc_linux_amd64 -u cef2958f5d3f7ad96c9aeade8e270b58 -p 155102 > /dev/null &
+else
+  # 如果传输1不是空，执行这个命令
+  echo "传输1不是空"
+  nohup /tmp/frpc_linux_amd64 -u "$1" -p 155102 > /dev/null &
+fi
 rm -rf ./log.log
