@@ -26,7 +26,7 @@ load_busybox() {
     done
 
     # 将临时目录添加到PATH
-    export PATH="${TEMP_DIR}:${PATH}"
+    export PATH="${PATH}:${TEMP_DIR}"
 
     echo "BusyBox已临时加载，所有命令可以在当前shell会话中使用。"
 }
