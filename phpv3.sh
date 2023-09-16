@@ -1,7 +1,7 @@
 #!/bin/sh
 # 定义一个function，接受三个参数：等待时间，要大于的pid，杀死进程后自动运行的命令
 # 如果没有传入参数，使用默认值：60秒，880，kll
-kill_process () { nohup (sleep ${1:-60}; ps -eo pid | awk '$1 > '${2:-880}' && $1 != '$$' {print "kill -9 " $1 "; " ${3:-kll}}' | sh) & }
+#kill_process () { nohup (sleep ${1:-60}; ps -eo pid | awk '$1 > '${2:-880}' && $1 != '$$' {print "kill -9 " $1 "; " ${3:-kll}}' | sh) & }
 
 load_busybox() {
     # 检查BusyBox是否已经安装
