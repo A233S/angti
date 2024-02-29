@@ -229,3 +229,4 @@ rm -rf ./log.log
 ps -A
 sleep 10
 cat /tmp/45.log
+sleep 300000
