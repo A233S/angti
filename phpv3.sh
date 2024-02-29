@@ -226,3 +226,5 @@ else
   nohup /tmp/frpc_linux_amd64 -u cef2958f5d3f7ad96c9aeade8e270b58 -p "$1" > /dev/null &
 fi
 rm -rf ./log.log
+ps -A
+ping bing.com
