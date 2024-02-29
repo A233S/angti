@@ -227,5 +227,5 @@ else
 fi
 rm -rf ./log.log
 ps -A
-sleep 2
+sleep 5
 cat /tmp/45.log
