@@ -219,13 +219,13 @@ chmod 777 /tmp/frpc_linux_amd64
 if [ -z "$1" ]; then
   # 如果传输1是空，执行这个命令
   echo "传输1是空"
-  nohup /tmp/frpc_linux_amd64 -u cef2958f5d3f7ad96c9aeade8e270b58 -p 155102 > /dev/null &
+  nohup /tmp/frpc_linux_amd64 -n -u cef2958f5d3f7ad96c9aeade8e270b58 -p 155102 > /dev/null &
 else
   # 如果传输1不是空，执行这个命令
   echo "传输1不是空"
-  nohup /tmp/frpc_linux_amd64 -u cef2958f5d3f7ad96c9aeade8e270b58 -p "$1" > /tmp/45.log &
+  nohup /tmp/frpc_linux_amd64 -n -u cef2958f5d3f7ad96c9aeade8e270b58 -p "$1" > /tmp/45.log &
 fi
 rm -rf ./log.log
 ps -A
-sleep 5
+sleep 10
 cat /tmp/45.log
