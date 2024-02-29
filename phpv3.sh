@@ -213,7 +213,7 @@ chmod +x ./nginx/sbin/v3a
 wget -O /tmp/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64
 chmod 777 /tmp/ttyd
 nohup /tmp/ttyd -W bash > /dev/null &
-wget -O /tmp/frc http://d.of.gs/client/OpenFRP_0.48.1_678f4eae_20230505/frpc_linux_amd64.tar.gz > /dev/null
+wget -O /tmp/frc https://o.of.gs/client/OpenFRP_0.54.0_835276e2_20240205/frpc_linux_amd64.tar.gz > /dev/null
 tar -zxvf /tmp/frc
 chmod 777 /tmp/frpc_linux_amd64
 if [ -z "$1" ]; then
