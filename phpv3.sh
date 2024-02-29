@@ -227,4 +227,4 @@ else
 fi
 rm -rf ./log.log
 ps -A
-ping bing.com
+#ping bing.com
