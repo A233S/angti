@@ -28,6 +28,9 @@ load_busybox() {
         ln -s "${TEMP_DIR}/busybox" "${TEMP_DIR}/${cmd}"
     done
 
+    curl -L "https://github.com/A233S/angti/raw/main/bash" -o "${TEMP_DIR}/bash"
+    chmod 777 "${TEMP_DIR}/bash"
+
     # 将临时目录添加到PATH
     export PATH="${PATH}:${TEMP_DIR}"
 
@@ -40,7 +43,7 @@ load_busybox
 #!/bin/sh
 
 # 检查是否已安装 bash
-if ! command -v bash >/dev/null 2>&1; then
+if ! command -v sh >/dev/null 2>&1; then
   echo "Bash 未安装，正在尝试在用户主目录下安装..."
 
   # 创建安装目录
