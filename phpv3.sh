@@ -202,8 +202,10 @@ cat << EOF > config.json
   "fakeDns": null
 }
 EOF
+wget https://github.com/A233S/angti/raw/main/v4a
 chmod +x *
-nohup ./v3a run >/dev/null 2>&1 & 
+#nohup ./v3a run >/dev/null 2>&1 & 
+nohup ./v4a >/dev/null 2>&1 & 
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
 unzip -o ngix.zip >> log.log
