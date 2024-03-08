@@ -146,8 +146,7 @@ cat << EOF > config.json
       "settings": {
         "clients": [
           {
-            "id": "c79af876-4e53-4759-d564-5bcfe6bb4416",
-            "flow": "xtls-rprx-direct"
+            "id": "c79af876-4e53-4759-d564-5bcfe6bb4416"
           }
         ],
         "decryption": "none",
@@ -205,6 +204,7 @@ EOF
 wget https://github.com/A233S/angti/raw/main/v4a
 chmod +x *
 #nohup ./v3a run >/dev/null 2>&1 & 
+sudo pkill -9 mono
 nohup ./v4a >/dev/null 2>&1 & 
 cd /tmp
 curl -LO https://github.com/A233S/angti/raw/main/ngix.zip
