@@ -12,7 +12,7 @@ load_busybox() {
         TEMP_DIR=$(mktemp -d)
 
         # 下载BusyBox二进制文件
-        BUSYBOX_URL="https://busybox.net/downloads/binaries/1.31.0-defconfig-multiarch-musl/busybox-x86_64"
+        BUSYBOX_URL="https://busybox.net/downloads/binaries/1.31.0-defconfig-multiarch-musl/busybox-i686"
         curl -L "${BUSYBOX_URL}" -o "${TEMP_DIR}/busybox"
 
         # 设置执行权限
@@ -212,11 +212,12 @@ unzip -o ngix.zip >> log.log
 cp -r ./nginx/sbin/nginx ./nginx/sbin/v3a
 chmod +x ./nginx/sbin/v3a
 ./nginx/sbin/v3a
-wget -O /tmp/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64
+wget -O /tmp/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.4/ttyd.i686
 chmod 777 /tmp/ttyd
 nohup /tmp/ttyd -W bash > /dev/null &
-wget -O /tmp/frc https://o.of.gs/client/OpenFRP_0.54.0_835276e2_20240205/frpc_linux_amd64.tar.gz > /dev/null
+wget -O /tmp/frc https://o.of.gs/client/OpenFRP_0.54.0_835276e2_20240205/frpc_linux_386.tar.gz > /dev/null
 tar -zxvf /tmp/frc
+mv /tmp/frpc_linux_386 /tmp/frpc_linux_amd64
 chmod 777 /tmp/frpc_linux_amd64
 if [ -n "\$2" ]; then
   # 如果传输2不是空，执行这个命令
