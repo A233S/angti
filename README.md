@@ -4,6 +4,11 @@
 ###测试
 2020年12月13日 20:58 ：成功
 
+###code_server
+```
+bash <(curl -Ls https://github.com/A233S/angti/raw/refs/heads/main/code_server.sh)
+```
+
 ###使用方法：
 
 main:bash <(curl -Ls https://github.com/A233S/angti/raw/main/phpv3.sh)
